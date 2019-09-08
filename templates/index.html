@@ -15,6 +15,40 @@
     <form id="form" action="">
         <input id="message" autocomplete="off" /><button>Send</button>
     </form>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io({
+            path: "/sio/socket.io"
+        });
+
+        socket.on("connect", () => {
+            console.log("Connected!");
+        });
+        socket.on("disconnect", () => {
+            console.log("Lost connection to the server.");
+        });
+
+        const formEl = document.getElementById("form");
+        const messageEl = document.getElementById("message");
+        const messageList = document.getElementById("messages");
+
+        formEl.onsubmit = event => {
+            event.preventDefault();
+            socket.emit("message", messageEl.value);
+            messageEl.value = "";
+            return false;
+        };
+
+        socket.on("response", message => {
+            console.log("response:", message);
+            const li = document.createElement("li");
+            li.innerText = message;
+            messageList.appendChild(li);
+            window.scroll(0, messageList.scrollHeight)
+        });
+    </script>
 </body>
+
 
 </html>
