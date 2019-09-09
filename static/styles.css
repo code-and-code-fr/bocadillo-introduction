@@ -9,8 +9,8 @@ body {
 }
 
 form {
-    background: #000;
-    padding: 3px;
+    background: #eeeeee;
+    padding: 2em;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -25,9 +25,11 @@ form input {
 
 form button {
     width: 9%;
-    background: rgb(130, 224, 255);
+    background: rgb(63, 124, 144);
     border: none;
     padding: 10px;
+    color: white;
+    font-weight: bold;
 }
 
 #messages {
@@ -38,9 +40,20 @@ form button {
 }
 
 #messages li {
-    padding: 5px 10px;
+    padding: 2em;
+    background-color: #e0e0e0;
+    border-radius: 3px;
+    font-size: 1.5em;
+    color: #353535;
+    width: 50%;
+    margin: auto;
+    margin-top: 2em;
 }
 
 #messages li:nth-child(odd) {
     background: #eee;
+}
+
+#messages li:last-child {
+    margin-bottom: 6em;
 }
