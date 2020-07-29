@@ -23,7 +23,7 @@ starlette==0.12.9
 typed-ast==1.4.0
 typesystem==0.2.4
 urllib3==1.25.3
-uvicorn==0.8.6
+uvicorn==0.11.7
 uvloop==0.12.2
 websockets==7.0
 whitenoise==4.1.3
