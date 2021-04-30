@@ -22,7 +22,7 @@ six==1.12.0
 starlette==0.12.9
 typed-ast==1.4.0
 typesystem==0.2.4
-urllib3==1.25.3
+urllib3==1.25.8
 uvicorn==0.8.6
 uvloop==0.12.2
 websockets==7.0
